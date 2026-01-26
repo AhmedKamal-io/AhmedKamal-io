@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useTranslations } from "next-intl";
+// import { useTranslations } from "next-intl";
 
 const HeroText = () => {
   // const t = useTranslations("HeroText");
@@ -9,7 +9,7 @@ const HeroText = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen text-center">
       <h1 className="text-4xl md:text-6xl font-bold text-Whitey mb-4 Bigshadow max-w-2xl">
-        Hello I'm
+        Hello I&apos;m
         <span className="text-Whitey strokeSecound text-[52px] md:text-[65px] font-bold">
           Ahmed Kamal
         </span>

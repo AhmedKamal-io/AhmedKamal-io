@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // تم استيراد الخطوط بشكل صحيح
 import { Goldman, Rubik } from "next/font/google";
 
-import "../Styles/globals.css";
+import "@/Styles/globals.css";
 
 const primeFont = Goldman({
   variable: "--font-prime",
