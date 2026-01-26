@@ -58,7 +58,7 @@ const NavBottom = () => {
     <div className="fixed bottom-0 w-full z-[2000] lg:hidden flex justify-center px-2 mb-4">
       <div
         ref={navRef}
-        className="flex justify-between items-center px-2 md:px-8 py-1.5 bg-Blacky rounded-lg border-[1px] border-WhiteyFade shadow-2xl  w-fit max-w-[97%] gap-1 md:gap-2"
+        className="flex justify-between items-center px-1.5 md:px-6 py-1.5 bg-Blacky rounded-lg border-[1px] border-WhiteyFade shadow-2xl  w-fit max-w-[97%] gap-[3px] md:gap-2"
       >
         {links.map((link) => {
           const isActive = activeSection === link.href;
@@ -67,8 +67,8 @@ const NavBottom = () => {
             <a
               key={link.label}
               href={link.href}
-              className={`flex items-center gap-1 md:gap-2 px-2.5 py-2 rounded-md transition-all duration-500 overflow-hidden  ${
-                isActive ? "bg-Secound text-Blacky" : "text-Whitey"
+              className={`flex items-center gap-1 md:gap-2 px-2.5 py-2 rounded-md transition-all duration-500 overflow-hidden text-Whitey ${
+                isActive ? "bg-Secound" : ""
               }`}
               style={{ minWidth: isActive ? "fit-content" : "36px" }}
             >
