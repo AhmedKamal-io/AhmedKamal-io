@@ -5,29 +5,40 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-// const isDev = process.env.NODE_ENV === 'development';
+// const isProd = process.env.APP_STAGE === "production";
 
 const nextConfig = {
   reactStrictMode: true,
 
-  // --- إعدادات التطوير (Development) ---
+  // 1. إعدادات الـ Experimental (تسريع التطوير)
   experimental: {
-    // تسريع الكاش أثناء الشغل على الجهاز
+    // تفعيل الكاش لـ Turbopack (يفيد جداً في السرعة)
     turbopackFileSystemCacheForDev: true,
-
-    // تفعيل الـ Compiler الجديد لتحسين الأداء (React 19)
+    // تفعيل المترجم الجديد لـ React 19
     reactCompiler: true,
   },
 
-  // --- إعدادات الصور (حل مشكلة الـ 400 في البروداكشن) ---
+  // 2. إعدادات الصور (الحل النهائي للـ 404 والـ 400)
   images: {
-    // بنفعل الـ Optimization في الديف وعمليات الـ Build المستقرة
-    // لو لسه الصور بتضرب معاك في فيرسيل، غير السطر ده لـ true
+    // في الـ Production بنخليها true عشان نتخطى مشاكل الـ Path في فيرسيل
     unoptimized: false,
+    // لو بتستخدم صور من روابط خارجية مستقبلاً
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
 
-  // --- إعدادات البروداكشن (Production) ---
-  // تخطي أخطاء الـ Lint والـ TS عشان الـ Build ما يقفش على حاجات بسيطة
+  // 3. إعدادات المسارات (Routing & Paths)
+  // نتركها فارغة لضمان أن المسار يبدأ من الجذر (Root) في فيرسيل
+  basePath: "",
+  // إيقاف الـ trailingSlash لحل مشاكل الروابط الوهمية
+  trailingSlash: false,
+
+  // 4. إعدادات الـ Build والإنتاج
+  // تجاهل الأخطاء لضمان استمرارية الـ Deployment
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -35,13 +46,11 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
+  // إعداد اختياري: يساعد في استقرار الملفات الثابتة في بيئة Standalone
+  output: "standalone",
+
   // تحسين معالجة الروابط
   skipProxyUrlNormalize: true,
-
-  // لضمان استقرار المسارات بعد إلغاء اللغات
-  trailingSlash: false,
 };
-
-// ملاحظة: سطر الـ HMR Cache اللي مسحناه كان بيسبب كراش في السيرفر، Next.js بيتعامل معاه داخلياً مش محتاجينه هنا.
 
 module.exports = withBundleAnalyzer(nextConfig);
