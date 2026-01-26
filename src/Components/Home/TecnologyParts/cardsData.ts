@@ -67,7 +67,7 @@ export const cardsData = [
     title: "JavaScript Libraries",
     icon: FaBookAtlas,
     items: [
-      { name: "GSAP Animations", image: "/SVG/GSAP.svg", color: "#87c602" },
+      { name: "GSAP Animations", image: "/svg/GSAP.svg", color: "#87c602" },
       { name: "Framer Motion", icon: SiFramer, color: "#e809a8" },
     ],
   },
