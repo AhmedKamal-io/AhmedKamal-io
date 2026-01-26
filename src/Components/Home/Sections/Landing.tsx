@@ -3,7 +3,7 @@ import HeroText from "../HeroParts/HeroText";
 
 // تحميل RippleGrid بعد الصفحة مع شاشة انتظار
 const RippleGrid = dynamic(() => import("../../Outside/RippleGrid"));
-
+// import RippleGrid from "../../Outside/RippleGrid";
 const Landing = () => {
   return (
     <div id="home" className="relative">

@@ -1,8 +1,8 @@
 import React from "react";
-import { FaGithub, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 const TextType = dynamic(() => import("../../Outside/TextType"));
 
 const Introduce = () => {
@@ -60,10 +60,10 @@ const Introduce = () => {
           <a
             href="https://github.com/AhmedKamal-io"
             target="_blank"
-            aria-label="Visit my github profile"
+            aria-label="Visit my Youtube Channel"
             className="hover:text-Secound transition-all duration-500 outline-none hover:outline-3 hover:outline-Prime bg-AssendFade rounded-full p-1.5 border-2 border-PrimeFade "
           >
-            <FaGithub />
+            <FaYoutube />
           </a>
           <a
             href="https://www.instagram.com/a7med_kamal_ak"

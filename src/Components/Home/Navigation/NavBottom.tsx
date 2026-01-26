@@ -1,30 +1,100 @@
-import React from "react";
+"use client";
+import { useEffect, useRef, useState, useMemo } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import {
+  User,
+  LayoutGrid,
+  Cpu,
+  FolderRoot,
+  FileText,
+  // Mail,
+  PhoneCall,
+} from "lucide-react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const NavBottom = () => {
-  return (
-    <div className="fixed bottom-0 w-full z-50 lg:hidden flex justify-center Bigshadow">
-      <div className="flex  justify-evenly items-center px-1 sm:px-6 py-[10px] md:py-[8px]  max-w-lg w-[92%] sm:w-[90%] rounded-2xl bg-AssendFade shadow-Prime shadow-2xl backdrop-blur-[5px] text-shadow-Blacky text-white  sm:gap-3 mb-3 sm:mb-4 border-[0.25px] text-[15px] sm:text-md  font-semibold outline-3 outline-SecoundFade border-WhiteyFade z-2000 ">
-        {[
-          { label: "About", href: "#about" },
-          { label: "Services", href: "#services" },
-          { label: "Projects", href: "#projects" },
-        ].map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="relative  font-medium text-md sm:text-[15px]  transition-all duration-300 hover:text-Secound group md:text-lg"
-          >
-            {link.label}
-            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-Secound transition-all duration-300 group-hover:w-full rounded-full" />
-          </a>
-        ))}
+  const [activeSection, setActiveSection] = useState("");
+  const navRef = useRef(null);
+  const iconSize = 20;
+  const links = useMemo(
+    () => [
+      { label: "About", href: "#about", icon: <User size={iconSize} /> },
+      {
+        label: "Service",
+        href: "#services",
+        icon: <LayoutGrid size={iconSize} />,
+      },
+      { label: "Technos", href: "#tech", icon: <Cpu size={iconSize} /> },
+      {
+        label: "Projects",
+        href: "#projects",
+        icon: <FolderRoot size={iconSize} />,
+      },
+      { label: "Blog", href: "#blog", icon: <FileText size={iconSize} /> },
+      {
+        label: "Contact",
+        href: "#contact",
+        icon: <PhoneCall size={iconSize} />,
+      },
+    ],
+    [],
+  );
 
-        <a
-          href="#contact"
-          className=" transition-all duration-500 hover:shadow-md hover:shadow-Assend  bg-Assend text-Whitey px-2 rounded-full  outline-3 outline-Secound sm:text-md md:text-lg "
-        >
-          Contact
-        </a>
+  useEffect(() => {
+    links.forEach((link) => {
+      ScrollTrigger.create({
+        trigger: link.href,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => setActiveSection(link.href),
+        onEnterBack: () => setActiveSection(link.href),
+      });
+    });
+  }, [links]);
+
+  return (
+    <div className="fixed bottom-0 w-full z-[2000] lg:hidden flex justify-center px-2 mb-4">
+      <div
+        ref={navRef}
+        className="flex justify-between items-center px-2 md:px-8 py-1.5 bg-Blacky rounded-lg border-[1px] border-WhiteyFade shadow-2xl  w-fit max-w-[97%] gap-1 md:gap-2"
+      >
+        {links.map((link) => {
+          const isActive = activeSection === link.href;
+
+          return (
+            <a
+              key={link.label}
+              href={link.href}
+              className={`flex items-center gap-1 md:gap-2 px-2.5 py-2 rounded-md transition-all duration-500 overflow-hidden  ${
+                isActive ? "bg-Secound text-Blacky" : "text-Whitey"
+              }`}
+              style={{ minWidth: isActive ? "fit-content" : "36px" }}
+            >
+              <span
+                className={`${isActive ? "scale-110" : "scale-100"} transition-transform`}
+              >
+                {link.icon}
+              </span>
+
+              {/* النص يظهر فقط عندما يكون السيكشن نشط */}
+              <div
+                className={`overflow-hidden transition-all duration-500 flex items-center ${
+                  isActive
+                    ? "max-w-[100px] opacity-100 ml-1"
+                    : "max-w-0 opacity-0"
+                }`}
+              >
+                <span className="font-bold text-[12px] md:text-sm uppercase tracking-wider">
+                  {link.label}
+                </span>
+              </div>
+            </a>
+          );
+        })}
+
+        {/* زر Contact منفصل لشكله المميز */}
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import CardsTech from "../TecnologyParts/CardsTech";
 const Technology = () => {
   return (
     <section
-      id="technologies"
+      id="tech"
       className="bg-BlueyFade  p-2 pt-12 pb-6 flex flex-col justify-center items-center"
     >
       <h2 className="text-3xl font-bold text-center py-4  bg-gradient-to-l from-Blacky via-Blacky to-Assend text-Whitey bg-clip-text sm:text-4xl sm:max-w-sm md:text-5xl md:max-w-lg mx-auto Bigshadow z-10">

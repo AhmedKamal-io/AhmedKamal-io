@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCopyright, FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaCopyright, FaFacebook, FaInstagram } from "react-icons/fa";
 import { FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
@@ -16,7 +16,7 @@ const Footer = () => {
           <a href="#services" className="hover:text-Secound m-2">
             Services
           </a>
-          <a href="#technologies" className="hover:text-Secound m-2">
+          <a href="#tech" className="hover:text-Secound m-2">
             Tecnologies
           </a>
         </div>
@@ -24,7 +24,9 @@ const Footer = () => {
           <a href="#projects" className="hover:text-Secound m-2">
             Projects
           </a>
-
+          <a href="#blog" className="hover:text-Secound m-2">
+            Blog
+          </a>
           <a href="#contact" className="hover:text-Secound m-2">
             Contuct Us
           </a>

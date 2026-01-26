@@ -8,7 +8,6 @@ const Grid = () => {
           <Image
             src="/image/Landing.jpg"
             alt="Landing"
-            objectFit="full"
             loading="lazy"
             fill
             className="object-cover rounded-2xl absolute"
@@ -19,7 +18,6 @@ const Grid = () => {
           <Image
             src="/image/Performance.png"
             alt="Performance"
-            objectFit="full"
             loading="lazy"
             layout="fill"
             className="object-cover rounded-2xl absolute"

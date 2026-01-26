@@ -28,13 +28,14 @@ const page = () => {
   return (
     <div>
       <Suspense fallback={<Loading />}>
-        <NavBar />
+        <div className="w-full">
+          <NavBar />
+        </div>
         <NavBottom />
         <Landing />
         <SliderFreeLeft />
         <About />
         <Services />
-        <p>Test Path: {process.cwd()}</p>
         <Technology />
         <Projects />
         {/* <Testimonials /> */}
