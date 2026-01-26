@@ -1,9 +1,9 @@
+
 import dynamic from "next/dynamic";
 import React from "react";
-import { FaInstagram, FaUserPlus, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaUserPlus, FaFacebook, FaYoutube } from "react-icons/fa";
 
-const DotGrid = dynamic(() => import("../Outside/DotGrid"), { ssr: true });
-import { FaXTwitter } from "react-icons/fa6";
+const DotGrid = dynamic(() => import("../../Outside/DotGrid"), { ssr: true });
 
 const AboutSocial = () => {
   return (
@@ -27,7 +27,7 @@ const AboutSocial = () => {
       </div>
       <div className="z-20">
         <h2 className="text-3xl font-bold text-center py-4 text-Whitey sm:text-4xl sm:max-w-sm md:text-5xl md:max-w-lg mx-auto GlueSecound relative">
-          Social Media{" "}
+          Social Media
         </h2>
         {/* Social cards */}
         <div className="flex justify-center items-center flex-wrap gap-4">
@@ -43,7 +43,7 @@ const AboutSocial = () => {
               <FaFacebook />
             </a>
             <h4 className="flex justify-center items-center text-lg mt-4 font-light">
-              Add me{" "}
+              Add me
               <span className="text-xl ml-2 text-Whitey">
                 <a
                   href="https://www.facebook.com/ahmed.kamsl.5"
@@ -66,7 +66,7 @@ const AboutSocial = () => {
               <FaInstagram />
             </a>
             <h4 className="flex justify-center items-center text-lg mt-4 font-light">
-              Follow Me{" "}
+              Follow Me
               <span className="text-xl ml-2 text-Whitey">
                 <a
                   href="https://www.instagram.com/a7med_kamal_ak"
@@ -79,22 +79,22 @@ const AboutSocial = () => {
             </h4>
           </div>
           <div className="flex justify-center items-center mt-4 w-fit flex-col p-4 bg-BlackyFade rounded-2xl border-3  border-Whitey hover:transform hover:scale-110 duration-700 transition-all mx-9">
-            <h3 className="text-2xl">X.com</h3>
+            <h3 className="text-2xl">Youtube</h3>
             <a
-              aria-label="Visit my X Twitter profile"
+              aria-label="Visit my Youtube Channel"
               href="https://x.com/AhmedKamal_io"
               target="_blank"
               className="text-5xl border-2 border-Blacky text-white mx-2  duration-700 shadow-lg shadow-WhiteyFade bg-Prime rounded-full flex justify-center items-center p-3 hover:scale-110 transform transition-all hover:shadow-2xl hover:shadow-Secound hover:bg-Whitey hover:text-Prime Bigshadow my-1 lg:my-4 "
             >
-              <FaXTwitter />
+              <FaYoutube />
             </a>
             <h4 className="flex justify-center items-center text-lg mt-4 font-light">
-              Follow Me{" "}
+              Subscribe
               <span className="text-xl ml-2 text-Whitey">
                 <a
                   href="https://x.com/AhmedKamal_io"
                   target="_blank"
-                  aria-label="Visit my X Twitter profile"
+                  aria-label="Visit my Youtube Channel"
                 >
                   <FaUserPlus />
                 </a>

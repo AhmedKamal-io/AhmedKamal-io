@@ -87,7 +87,7 @@ const Contact = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="bg-Secound text-Whitey mt-4 rounded-2xl px-7 py-2.5 w-fit mx-8"
+            className="bg-Prime text-Whitey mt-4 rounded-2xl px-7 py-2.5 w-fit mx-8"
           >
             Send
           </button>

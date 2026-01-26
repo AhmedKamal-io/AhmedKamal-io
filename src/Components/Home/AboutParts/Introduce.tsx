@@ -2,7 +2,8 @@ import React from "react";
 import { FaGithub, FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-const TextType = dynamic(() => import("../Outside/TextType"));
+import { FaXTwitter } from "react-icons/fa6";
+const TextType = dynamic(() => import("../../Outside/TextType"));
 
 const Introduce = () => {
   return (
@@ -79,6 +80,14 @@ const Introduce = () => {
             className="hover:text-Secound transition-all duration-500 outline-none hover:outline-3 hover:outline-Prime bg-AssendFade rounded-full p-1.5 border-2 border-PrimeFade "
           >
             <FaLinkedin />
+          </a>
+          <a
+            href="https://x.com/AhmedKamal_io"
+            target="_blank"
+            aria-label="Visit my X Twitter profile"
+            className="hover:text-Secound transition-all duration-500 outline-none hover:outline-3 hover:outline-Prime bg-AssendFade rounded-full p-1.5 border-2 border-PrimeFade "
+          >
+            <FaXTwitter />
           </a>
         </div>
       </div>

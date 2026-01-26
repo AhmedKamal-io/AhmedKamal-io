@@ -1,12 +1,11 @@
 import React from "react";
 import { FaCopyright, FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter, FaYoutube } from "react-icons/fa6";
 
 const Footer = () => {
   return (
     <footer className=" flex flex-nowrap flex-col justify-center items-center w-full pb-14 lg:pb-2.5 bg-Blacky">
       <div className="border-b-1 border-Whitey flex flex-col sm:flex-row   justify-between items-start p-4 border-t-1 w-full">
-        {" "}
         <div className="text-sm text-Whitey  flex flex-col w-1/2 my-2">
           <a href="#home" className="hover:text-Secound m-2 ">
             Home
@@ -47,14 +46,24 @@ const Footer = () => {
           >
             <FaFacebook />
           </a>
-          <a
+          {/* <a
             href="https://github.com/AhmedKamal-io"
             target="_blank"
             aria-label="Visit my github profile"
             className="mx-3 sm:mx-2"
           >
             <FaGithub />
+          </a> */}
+
+          <a
+            href="https://github.com/AhmedKamal-io"
+            target="_blank"
+            aria-label="Visit my Youtube Channel"
+            className="mx-3 sm:mx-2"
+          >
+            <FaYoutube />
           </a>
+
           <a
             href="https://x.com/AhmedKamal_io"
             className="mx-3 sm:mx-2"
@@ -74,16 +83,23 @@ const Footer = () => {
         </div>
         <div className="flex flex-nowrap w-1/2 my-2">
           <h2 className="text-sm ml-[30%]">
-            Powerd by : <a href="">Ahmed Kamal</a>
+            Powerd by :{" "}
+            <a href="" className="GluePrime">
+              Ahmed Kamal
+            </a>
           </h2>
         </div>
       </div>
-      <div className="flex flex-row flex-nowrap justify-center items-center w">
-        <div className="flex justify-center items-center py-3.5 text-md text-Whitey">
-          <span>
-            <FaCopyright />
-          </span>
-          <p>Copyright All are reserved </p>
+      <div className="flex flex-row flex-nowrap justify-center items-center gap-3.5">
+        <div className="flex justify-center items-center gap-2 py-3.5 text-md text-Whitey">
+          <FaCopyright className="text-lg" />
+          <p className="tracking-wide">
+            {new Date().getFullYear()} — All rights reserved
+          </p>
+        </div>
+
+        <div className="text-md bg-AssendFade rounded-full px-2">
+          Version 1.5.4
         </div>
       </div>
     </footer>

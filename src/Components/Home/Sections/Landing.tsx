@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import HeroText from "../HeroParts/HeroText";
 
 // تحميل RippleGrid بعد الصفحة مع شاشة انتظار
-const RippleGrid = dynamic(() => import("../Outside/RippleGrid"));
+const RippleGrid = dynamic(() => import("../../Outside/RippleGrid"));
 
 const Landing = () => {
   return (
