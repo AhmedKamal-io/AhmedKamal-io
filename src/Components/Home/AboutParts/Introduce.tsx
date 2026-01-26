@@ -12,7 +12,7 @@ const Introduce = () => {
       <div className="w-full sm:w-1/3  flex justify-center ">
         <div className="relative w-[300px] sm:w-[500px] lg:w-[98%] aspect-square rounded-lg overflow-hidden shadow-lg shadow-WhiteyFade">
           <Image
-            src="/Image/Img1.webp"
+            src="/image/Img1.webp"
             alt="Ahmed Image"
             fill
             priority

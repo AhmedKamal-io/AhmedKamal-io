@@ -3,14 +3,14 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 const company = [
-  { src: "/Image/Companies/Target.png", alt: "Target", bg: "bg-Whitey" },
-  { src: "/Image/Companies/Tesla.png", alt: "Tesla", bg: "bg-Blacky" },
-  { src: "/Image/Companies/Tiktok.png", alt: "Tiktok", bg: "bg-Whitey" },
-  { src: "/Image/Companies/Twitch.png", alt: "Twitch", bg: "bg-Blacky" },
-  { src: "/Image/Companies/Uber.png", alt: "Uber", bg: "bg-Whitey" },
-  { src: "/Image/Companies/Walmart.png", alt: "Walmart", bg: "bg-Blacky" },
-  { src: "/Image/Companies/Whatsapp.png", alt: "Whatsapp", bg: "bg-Blacky" },
-  { src: "/Image/Companies/Yahoo.png", alt: "Yahoo", bg: "bg-Blacky" },
+  { src: "/image/Companies/Target.png", alt: "Target", bg: "bg-Whitey" },
+  { src: "/image/Companies/Tesla.png", alt: "Tesla", bg: "bg-Blacky" },
+  { src: "/image/Companies/Tiktok.png", alt: "Tiktok", bg: "bg-Whitey" },
+  { src: "/image/Companies/Twitch.png", alt: "Twitch", bg: "bg-Blacky" },
+  { src: "/image/Companies/Uber.png", alt: "Uber", bg: "bg-Whitey" },
+  { src: "/image/Companies/Walmart.png", alt: "Walmart", bg: "bg-Blacky" },
+  { src: "/image/Companies/Whatsapp.png", alt: "Whatsapp", bg: "bg-Blacky" },
+  { src: "/image/Companies/Yahoo.png", alt: "Yahoo", bg: "bg-Blacky" },
 ];
 
 const CompanySlider3 = () => {

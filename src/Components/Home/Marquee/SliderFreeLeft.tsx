@@ -4,18 +4,18 @@ import Marquee from "react-fast-marquee";
 
 const platforms = [
   {
-    src: "/Image/Freelance/Freelancer.png",
+    src: "/image/Freelance/Freelancer.png",
     alt: "Freelancer",
     link: "https://www.freelancer.com/u/AhmedKamal5050",
   },
-  { src: "/Image/Freelance/Mustaqel.png", alt: "Mustaqel", link: "" },
-  { src: "/Image/Freelance/Khamsat.png", alt: "Khamsat", link: "" },
+  { src: "/image/Freelance/Mustaqel.png", alt: "Mustaqel", link: "" },
+  { src: "/image/Freelance/Khamsat.png", alt: "Khamsat", link: "" },
   {
-    src: "/Image/Freelance/Upwork.png",
+    src: "/image/Freelance/Upwork.png",
     alt: "Upwork",
     link: "https://www.upwork.com/freelancers/~01fa8cb5afaf2d1ca5",
   },
-  { src: "/Image/Freelance/Toptal.png", alt: "Toptal", link: "" },
+  { src: "/image/Freelance/Toptal.png", alt: "Toptal", link: "" },
 ];
 
 const Slider = () => {

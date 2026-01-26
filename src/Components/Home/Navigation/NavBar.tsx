@@ -11,7 +11,7 @@ const NavBar = () => {
       <div>
         <a href="#home">
           <Image
-            src="/Image/personal-logo-png.png"
+            src="/image/personal-logo-png.png"
             alt="Logo Of Ahmed Kamal"
             width={50}
             height={50}

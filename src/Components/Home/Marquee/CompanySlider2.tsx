@@ -3,16 +3,16 @@ import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 const companies = [
-  { src: "/Image/Companies/Airbnb.png", alt: "Airbnb", bg: "bg-Blacky" },
-  { src: "/Image/Companies/Shopify.png", alt: "Shopify", bg: "bg-Whitey" },
-  { src: "/Image/Companies/Netflex.png", alt: "Netflex", bg: "bg-Blacky" },
+  { src: "/image/Companies/Airbnb.png", alt: "Airbnb", bg: "bg-Blacky" },
+  { src: "/image/Companies/Shopify.png", alt: "Shopify", bg: "bg-Whitey" },
+  { src: "/image/Companies/Netflex.png", alt: "Netflex", bg: "bg-Blacky" },
 
-  { src: "/Image/Companies/OpenAi.png", alt: "OpenAi", bg: "bg-AssendFade" },
-  { src: "/Image/Companies/Paypal.png", alt: "Paypal", bg: "bg-Blacky" },
-  { src: "/Image/Companies/Reddit.png", alt: "Reddit", bg: "bg-Blacky" },
+  { src: "/image/Companies/OpenAi.png", alt: "OpenAi", bg: "bg-AssendFade" },
+  { src: "/image/Companies/Paypal.png", alt: "Paypal", bg: "bg-Blacky" },
+  { src: "/image/Companies/Reddit.png", alt: "Reddit", bg: "bg-Blacky" },
 
-  { src: "/Image/Companies/Nike.png", alt: "Nike", bg: "bg-Whitey" },
-  { src: "/Image/Companies/Spotify.png", alt: "Spotify", bg: "bg-Blacky" },
+  { src: "/image/Companies/Nike.png", alt: "Nike", bg: "bg-Whitey" },
+  { src: "/image/Companies/Spotify.png", alt: "Spotify", bg: "bg-Blacky" },
 ];
 const CompanySlider2 = () => {
   return (

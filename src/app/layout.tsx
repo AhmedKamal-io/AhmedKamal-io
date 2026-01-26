@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 // تم استيراد الخطوط بشكل صحيح
 import { Goldman, Rubik } from "next/font/google";
 
-import "@/Styles/globals.css";
+import "../Styles/globals.css";
 
 const primeFont = Goldman({
   variable: "--font-prime",
@@ -19,7 +19,7 @@ const secondFont = Rubik({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ahmed-kamal-tau.vercel.app"),
+  metadataBase: new URL("https://ahmed-kamal-io.vercel.app"),
   title: "Ahmed Kamal io",
   description:
     "I'm Ahmed Kamal, a Full Stack Web Developer. View my portfolio, projects, and contact information.",
@@ -105,7 +105,7 @@ export const metadata: Metadata = {
     title: "Ahmed Kamal",
     description:
       "Full Stack Web Developer crafting modern web experiences with Next.js and the MERN Stack. Dive into my projects and see what I build.",
-    url: "https://ahmed-kamal-tau.vercel.app/",
+    url: "https://ahmed-kamal-io.vercel.app/",
     siteName: "Ahmed Kamal-io",
     images: [
       {

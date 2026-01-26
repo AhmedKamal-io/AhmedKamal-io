@@ -6,19 +6,19 @@ const AboutSecound = () => {
     <div className="bg-AssendFade backdrop-blur-[3px] rounded-lg border border-WhiteyFade w-[95%] p-4 my-1   shadow-SecoundFade shadow-xl flex flex-row flex-wrap sm:flex-nowrap justify-between items-center gap-4 z-10 mb-[10px]">
       <div className="sm:hidden relative w-full sm:w-1/3  flex justify-center">
         <div className="relative w-[300px] sm:w-[500px] lg:w-[98%] aspect-square rounded-lg overflow-hidden shadow-lg shadow-WhiteyFade">
-          <Image src="/Image/Img2.webp" alt="Profile photo" fill priority />
+          <Image src="/image/Img2.webp" alt="Profile photo" fill priority />
         </div>
       </div>
       <div className="w-full  sm:w-2/3 mt-4">
         <p className="text-md leading-6 mb-4">
-          I mainly build with{" "}
+          I mainly build with
           <span className="text-Secound font-semibold bg-BlackyFade p-0.5 rounded-2xl">
             Next.js
-          </span>{" "}
-          due to its performance and flexibility, but I also utilize the{" "}
+          </span>
+          due to its performance and flexibility, but I also utilize the
           <span className="p-0.5 rounded-2xl text-Secound font-semibold bg-BlackyFade">
             MERN stack
-          </span>{" "}
+          </span>
           when projects require it.
         </p>
         <p className="text-md leading-6 mb-6">
@@ -28,9 +28,8 @@ const AboutSecound = () => {
         <p className="mb-2.5">
           You can call me :
           <span className="text-[125%] text-Secound p-0.5 rounded-2xl font-bold bg-BlackyFade">
-            {" "}
             Dr.Error
-          </span>{" "}
+          </span>
         </p>
         <a
           href="#projects"
@@ -41,7 +40,7 @@ const AboutSecound = () => {
       </div>
       <div className="hidden relative w-full sm:w-1/3  sm:flex justify-center">
         <div className="hidden  relative w-[300px] sm:w-[500px] lg:w-[98%] aspect-square rounded-lg overflow-hidden shadow-lg shadow-WhiteyFade sm:flex">
-          <Image src="/Image/Img2.webp" alt="Profile photo" fill priority />
+          <Image src="/image/Img2.webp" alt="Profile photo" fill priority />
         </div>
       </div>
     </div>

@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-WhiteyFade relative">
       <Image
-        src="/Image/WorldMap.png"
+        src="/image/WorldMap.png"
         alt="WorldMap"
         fill
         loading="lazy"

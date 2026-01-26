@@ -15,7 +15,7 @@ const CardsSection = () => {
           >
             {/* الخلفية */}
             <Image
-              src="/Image/dark-background1.png"
+              src="/image/dark-background1.png"
               alt="Background"
               fill
               className="object-cover z-0"

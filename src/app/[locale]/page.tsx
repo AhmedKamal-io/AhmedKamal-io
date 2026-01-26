@@ -27,18 +27,16 @@ const Footer = dynamic(() => import("@/Components/Home/Sections/Footer"));
 const page = () => {
   return (
     <div>
-      {/* المكونات دي تظهر فوراً وتفضل ثابتة */}
-      <NavBar />
-      <NavBottom />
-      <Landing />
-      <SliderFreeLeft />
-      <About />
-
-      {/* المكونات التقيلة اللي تحت هي اللي تدخل في Suspense */}
       <Suspense fallback={<Loading />}>
+        <NavBar />
+        <NavBottom />
+        <Landing />
+        <SliderFreeLeft />
+        <About />
         <Services />
         <Technology />
         <Projects />
+        {/* <Testimonials /> */}
         <Suspense fallback={<HomeBlogSkeleton />}>
           <HomeBlog />
         </Suspense>
