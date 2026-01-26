@@ -34,6 +34,7 @@ const page = () => {
         <SliderFreeLeft />
         <About />
         <Services />
+        <p>Test Path: {process.cwd()}</p>
         <Technology />
         <Projects />
         {/* <Testimonials /> */}
