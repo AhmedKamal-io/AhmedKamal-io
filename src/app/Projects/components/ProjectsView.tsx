@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import { PROJECTS_DATABASE } from "./ProjectsData"; // استيراد الداتا
+import { Button } from "@/components/ui/button";
 
 export function ProjectsContent() {
   const [currentFolder, setCurrentFolder] = useState<
@@ -23,12 +24,12 @@ export function ProjectsContent() {
     <div className="flex flex-col h-full bg-[#1a1a1a] text-white select-none relative overflow-hidden">
       {/* 1. Navigation Bar */}
       <div className="h-10 border-b border-[#333] bg-[#202020] flex items-center px-3 gap-2">
-        <button
+        <Button
           onClick={() => setCurrentFolder(null)}
           className={`no-drag p-1 rounded transition-all ${currentFolder ? "hover:bg-[#444] text-white opacity-100" : "text-gray-600 opacity-30 cursor-default"}`}
         >
           <ChevronLeft size={18} />
-        </button>
+        </Button>
 
         <div className="flex items-center gap-2 text-[11px] text-gray-400 font-medium tracking-tight">
           <div className="flex items-center gap-1.5 px-2 py-0.5 hover:bg-[#333] rounded cursor-pointer transition-colors">
@@ -99,7 +100,7 @@ export function ProjectsContent() {
                       src={img.src}
                       alt={img.name}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110 optimize-gpu"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
                       <ZoomIn size={16} className="text-white" />
@@ -130,7 +131,7 @@ export function ProjectsContent() {
             }}
           >
             {/* زر الإغلاق - أضفنا له no-drag عشان مكتبة السحب ما تعكسوش */}
-            <button
+            <Button
               className="no-drag absolute top-6 right-6 p-3 text-white/50 hover:text-white hover:bg-white/10 rounded-full transition-all z-[100000]"
               onClick={(e) => {
                 e.stopPropagation();
@@ -138,7 +139,7 @@ export function ProjectsContent() {
               }}
             >
               <X size={40} />
-            </button>
+            </Button>
 
             <motion.div
               initial={{ scale: 0.9, y: 20 }}

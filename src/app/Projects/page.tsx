@@ -30,8 +30,8 @@ const Projects = () => {
         src="/image/Windows.jpg"
         alt="Projects"
         fill
-        unoptimized
-        className="object-cover absolute z-0"
+        // unoptimized
+        className="object-cover absolute z-0 optimize-gpu"
       />
 
       {/* 2. حاوية المحتوى: نعطيها z-10 و position relative لتظهر فوق الصورة */}
@@ -47,7 +47,7 @@ const Projects = () => {
               width={45}
               height={45}
               alt="this PC"
-              className="pointer-events-none" // لمنع سحب الصورة نفسها بالخطأ
+              className="pointer-events-none optimize-gpu" // لمنع سحب الصورة نفسها بالخطأ
             />
           </div>
           <span className="text-white text-xs text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
@@ -65,6 +65,7 @@ const Projects = () => {
               alt="Trash"
               width={64}
               height={64}
+              className="optimize-gpu"
             />
           </div>
           <span className="text-white text-xs text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
@@ -82,7 +83,7 @@ const Projects = () => {
               width={45}
               height={45}
               alt="this PC"
-              className="pointer-events-none" // لمنع سحب الصورة نفسها بالخطأ
+              className="pointer-events-none optimize-gpu" // لمنع سحب الصورة نفسها بالخطأ
             />
           </div>
           <span className="text-white text-xs text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
@@ -99,7 +100,7 @@ const Projects = () => {
               width={45}
               height={45}
               alt="Links"
-              className="pointer-events-none"
+              className="optimize-gpu pointer-events-none"
             />
           </div>
           <span className="text-white text-xs text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
@@ -117,7 +118,7 @@ const Projects = () => {
               width={45}
               height={45}
               alt="Images"
-              className="pointer-events-none"
+              className="pointer-events-none optimize-gpu"
             />
           </div>
           <span className="text-white text-xs text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">

@@ -1,8 +1,9 @@
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import HeroText from "../HeroParts/HeroText";
+import RippleGrid from "../Outside/RippleGrid";
 
 // تحميل RippleGrid بعد الصفحة مع شاشة انتظار
-const RippleGrid = dynamic(() => import("../../Outside/RippleGrid"));
+// const RippleGrid = dynamic(() => import("../../Outside/RippleGrid"));
 // import RippleGrid from "../../Outside/RippleGrid";
 const Landing = () => {
   return (

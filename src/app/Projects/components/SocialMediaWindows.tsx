@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MoreVertical, ShieldCheck, HardDrive } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function LinksContent() {
   // البيانات مدمجة وكأنها تطبيقات حقيقية مثبتة
@@ -124,9 +125,9 @@ export function LinksContent() {
             </div>
 
             {/* Options Button */}
-            <button className="p-2 hover:bg-[#333] rounded-md transition-colors">
+            <Button className="p-2 hover:bg-[#333] rounded-md transition-colors">
               <MoreVertical size={16} className="text-gray-400" />
-            </button>
+            </Button>
           </motion.div>
         ))}
       </div>

@@ -10,7 +10,7 @@ const Grid = () => {
             alt="Landing"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
           <h3 className="">Landing Pages</h3>
         </div>
@@ -20,7 +20,7 @@ const Grid = () => {
             alt="Performance"
             loading="lazy"
             layout="fill"
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="col-span-2 row-span-2 col-start-2 shadow-xl border-3 border-Assend transition-all duration-500 hover:shadow-Secound relative row-start-2  rounded-2xl Bigshadow ">
@@ -29,7 +29,7 @@ const Grid = () => {
             alt="Performance"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="rounded-2xl Bigshadow relative col-span-2 col-start-1 row-start-4 transition-all duration-500  shadow-xl hover:shadow-Secound border-3 border-Assend">
@@ -38,7 +38,7 @@ const Grid = () => {
             alt="ServerData"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2  Bigshadow relative col-start-4 row-start-1 rounded-2xl shadow-xl hover:shadow-Secound transition-all duration-500 border-3 border-Assend">
@@ -47,7 +47,7 @@ const Grid = () => {
             alt="SaaS"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="border-3 border-Assend row-span-2 col-start-4 Bigshadow row-start-3  transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound">
@@ -56,7 +56,7 @@ const Grid = () => {
             alt="SEO"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="col-start-3 row-start-4 relative Bigshadow rounded-2xl overflow-hidden shadow-xl hover:shadow-Secound transition-all duration-500 border-3 border-Assend">
@@ -65,7 +65,7 @@ const Grid = () => {
             alt="Debugging"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
       </div>
@@ -79,7 +79,7 @@ const Grid = () => {
             alt="Landing"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound border-2 border-Assend">
@@ -88,7 +88,7 @@ const Grid = () => {
             alt="Performance"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2 col-start-2 border-2 border-Assend row-start-3 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound">
@@ -97,7 +97,7 @@ const Grid = () => {
             alt="SaaS"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-3 col-start-1 row-start-4 border-2 border-Assend transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound">
@@ -106,7 +106,7 @@ const Grid = () => {
             alt="ServerData"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-3 col-start-3 row-start-1 border-2 border-Assend transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound">
@@ -115,7 +115,7 @@ const Grid = () => {
             alt="SaaS"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-3 col-start-3 row-start-4 border-2 border-Assend transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound">
@@ -124,7 +124,7 @@ const Grid = () => {
             alt="SEO"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2 col-start-2 row-start-5 border-2 border-Assend transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound">
@@ -133,7 +133,7 @@ const Grid = () => {
             alt="Debugging"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
       </div>
@@ -147,7 +147,7 @@ const Grid = () => {
             alt="Debugging"
             fill
             loading="lazy"
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound border-1 border-Assend">
@@ -156,7 +156,7 @@ const Grid = () => {
             alt="Performance"
             fill
             loading="lazy"
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound border-1 border-Assend">
@@ -165,7 +165,7 @@ const Grid = () => {
             alt="SaaS"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2 col-start-2 row-start-3 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound border-1 border-Assend">
@@ -174,7 +174,7 @@ const Grid = () => {
             alt="Landing"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="row-span-2 row-start-4 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound border-1 border-Assend">
@@ -183,7 +183,7 @@ const Grid = () => {
             alt="SaaS"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="col-start-2 row-start-5 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound border-1 border-Assend">
@@ -192,7 +192,7 @@ const Grid = () => {
             alt="SEO"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
         <div className="col-span-2 row-start-6 transition-all duration-500 rounded-2xl relative shadow-xl hover:shadow-Secound border-1 border-Assend">
@@ -201,7 +201,7 @@ const Grid = () => {
             alt="ServerData"
             loading="lazy"
             fill
-            className="object-cover rounded-2xl absolute"
+            className="object-cover rounded-2xl absolute optimize-gpu"
           />
         </div>
       </div>

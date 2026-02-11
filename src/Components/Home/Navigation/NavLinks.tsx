@@ -5,11 +5,11 @@ const NavLinks = () => {
   const iconSize = 18;
   const links = [
     { name: "About", href: "#about", icon: <User size={iconSize} /> },
-    {
-      name: "Services",
-      href: "#services",
-      icon: <LayoutGrid size={iconSize} />,
-    },
+    // {
+    //   name: "Services",
+    //   href: "#services",
+    //   icon: <LayoutGrid size={iconSize} />,
+    // },
     { name: "Tech", href: "#tech", icon: <Cpu size={iconSize} /> },
     {
       name: "Projects",

@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-// تم استيراد الخطوط بشكل صحيح
+import { Toaster } from "sonner";
 import { Goldman, Rubik } from "next/font/google";
-
+import Script from "next/script";
 import "@/Styles/globals.css";
+import { SmoothScrollProvider } from "@/components/providers/SmoothScrolling";
+import QueryProvider from "@/components/providers/QueryProvider";
 
 const primeFont = Goldman({
   variable: "--font-prime",
@@ -132,11 +134,18 @@ export default function RootLayout({
       className={`${primeFont.variable} ${secondFont.variable} scroll-smooth`}
     >
       <body
-        // 3. تطبيق الفئات الفعلية التي أنشأتها الخطوط (className)
-        // هذا يسمح لـ Tailwind CSS باستخدام الخطوط في التصنيفات الافتراضية
         className={`${primeFont.className} ${secondFont.className} antialiased`}
       >
-        {children}
+        <Script
+          src="https://upload-widget.cloudinary.com/global/all.js"
+          strategy="beforeInteractive"
+        />
+        <SmoothScrollProvider>
+          <QueryProvider>
+            {children}
+            <Toaster richColors position="bottom-right"  />
+          </QueryProvider>
+        </SmoothScrollProvider>
       </body>
     </html>
   );

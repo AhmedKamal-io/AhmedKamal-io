@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ZoomIn, LayoutGrid, Rows, Image as ImageIcon } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export function ImagesContent() {
   const [selectedImg, setSelectedImg] = useState<{
@@ -62,18 +63,18 @@ export function ImagesContent() {
         </div>
 
         <div className="flex items-center gap-1 bg-[#2d2d2d] p-1 rounded-md">
-          <button
+          <Button
             className={`no-drag p-1 rounded transition-colors ${viewMode === "grid" ? "bg-[#404040] text-blue-400 shadow-sm" : "hover:bg-[#333] text-gray-500"}`}
             onClick={() => setViewMode("grid")}
           >
             <LayoutGrid size={14} />
-          </button>
-          <button
+          </Button>
+          <Button
             className={`no-drag p-1 rounded transition-colors ${viewMode === "list" ? "bg-[#404040] text-blue-400 shadow-sm" : "hover:bg-[#333] text-gray-500"}`}
             onClick={() => setViewMode("list")}
           >
             <Rows size={14} />
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -100,7 +101,7 @@ export function ImagesContent() {
                       src={img.src}
                       alt={img.name}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="object-cover optimize-gpu transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
                       <ZoomIn size={20} className="text-white drop-shadow-lg" />
@@ -135,7 +136,7 @@ export function ImagesContent() {
                       src={img.src}
                       alt={img.name}
                       fill
-                      className="object-cover"
+                      className="object-cover optimize-gpu"
                     />
                   </div>
                   <span className="text-[11px] flex-1 truncate">
@@ -166,7 +167,7 @@ export function ImagesContent() {
             }}
           >
             {/* زر الإغلاق العلوي */}
-            <button
+            <Button
               className="no-drag absolute top-6 right-6 p-3 bg-white/5 hover:bg-white/20 text-white rounded-full transition-all z-[1000000]"
               onClick={(e) => {
                 e.stopPropagation();
@@ -174,7 +175,7 @@ export function ImagesContent() {
               }}
             >
               <X size={32} />
-            </button>
+            </Button>
 
             {/* الصورة الكبيرة */}
             <motion.div
@@ -188,7 +189,7 @@ export function ImagesContent() {
                 src={selectedImg.src}
                 alt={selectedImg.name}
                 fill
-                className="object-contain pointer-events-none drop-shadow-2xl"
+                className="optimize-gpu object-contain pointer-events-none drop-shadow-2xl"
                 priority
               />
             </motion.div>

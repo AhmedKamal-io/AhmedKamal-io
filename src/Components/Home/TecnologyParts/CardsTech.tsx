@@ -18,8 +18,7 @@ const CardsSection = () => {
               src="/image/dark-background1.png"
               alt="Background"
               fill
-              className="object-cover z-0"
-              // quality={100}
+              className="object-cover z-0 optimize-gpu"
               loading="lazy"
             />
 
@@ -48,7 +47,7 @@ const CardsSection = () => {
                             alt={item.name}
                             width={32}
                             height={32}
-                            className="object-contain"
+                            className="object-contain optimize-gpu"
                           />
                         ) : (
                           ItemIcon && <ItemIcon />

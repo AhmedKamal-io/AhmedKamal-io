@@ -10,11 +10,9 @@ const BackEnd = () => {
       <Image
         src="/Image/dark-background1.png"
         alt="Background"
-        layout="fill"
-        objectFit="cover"
-        quality={60}
+        fill
         loading="lazy"
-        className="z-0"
+        className="z-0 optimize-gpu object-cover"
       />
 
       {/* محتوى العنصر */}

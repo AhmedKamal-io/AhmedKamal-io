@@ -13,6 +13,7 @@ import {
   UserCircle,
   Mic2,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const TaskBar = () => {
   const [isStartOpen, setIsStartOpen] = useState(false);
@@ -112,9 +113,9 @@ const TaskBar = () => {
                     Ahmed Kamal
                   </span>
                 </div>
-                <button className="p-2 hover:bg-white/10 rounded-lg transition-colors text-red-400">
+                <Button className="p-2 hover:bg-white/10 rounded-lg transition-colors text-red-400">
                   <Power size={18} />
-                </button>
+                </Button>
               </div>
             </motion.div>
           </>
@@ -145,7 +146,7 @@ const TaskBar = () => {
               alt="Start"
               width={24}
               height={24}
-              className={`transition-transform active:scale-90 ${isStartOpen ? "scale-90" : ""}`}
+              className={`transition-transform active:scale-90 optimize-gpu ${isStartOpen ? "scale-90" : ""}`}
             />
             {/* Dot تحت الأيقونة المفتوحة */}
             {isStartOpen && (
@@ -160,6 +161,7 @@ const TaskBar = () => {
               alt="Terminal"
               width={24}
               height={24}
+              className="optimize-gpu"
             />
           </div>
 
@@ -170,6 +172,7 @@ const TaskBar = () => {
               alt="firefox"
               width={24}
               height={24}
+              className="optimize-gpu"
             />
           </div>
 
@@ -179,6 +182,7 @@ const TaskBar = () => {
               src="/icons/vscode/vscode.png"
               alt="VScode"
               width={24}
+              className="optimize-gpu"
               height={24}
             />
           </div>
@@ -190,7 +194,7 @@ const TaskBar = () => {
             <Image
               src={`/image/Windows/WiFi.png`}
               alt="WIFI"
-              className="w-4 h-4 bg-white/20 rounded-full md:block hidden"
+              className="w-4 h-4 bg-Whitey/20 optimize-gpu rounded-full md:block hidden"
               width={16}
               height={16}
             />

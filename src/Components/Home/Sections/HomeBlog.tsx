@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
-type Article = {
+type Blog = {
   id: number;
   title: string;
   description: string;
@@ -11,7 +11,7 @@ type Article = {
   image: string;
 };
 
-const articles: Article[] = [
+const blog: Blog[] = [
   {
     id: 1,
     title: "How to build scalable web apps",
@@ -67,7 +67,7 @@ const Blog = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {articles.map((article) => (
+          {blog.map((article) => (
             <div
               key={article.id}
               className="bg-BlackyFade rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col"
@@ -76,7 +76,7 @@ const Blog = () => {
                 <Image
                   src={article.image}
                   alt={article.title}
-                  className="object-cover w-full h-full"
+                  className="object-cover optimize-gpu w-full h-full"
                   width={300}
                   height={300}
                 />

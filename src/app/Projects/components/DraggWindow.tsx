@@ -12,6 +12,7 @@ import {
   HardDrive,
 } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function OSWindow({ title, children, isOpen, onClose }: any) {
@@ -53,25 +54,25 @@ export default function OSWindow({ title, children, isOpen, onClose }: any) {
               alt="icon"
               width={16}
               height={16}
-              className="pointer-events-none"
+              className="pointer-events-none optimize-gpu"
             />
             <span className="text-[12px] font-normal tracking-wide opacity-90">
               {title}
             </span>
           </div>
           <div className="flex h-full">
-            <button className="no-drag w-[46px] h-full flex items-center justify-center hover:bg-[#333333] transition-colors">
+            <Button className="no-drag w-[46px] h-full flex items-center justify-center hover:bg-[#333333] transition-colors">
               <Minus size={16} />
-            </button>
-            <button className="no-drag w-[46px] h-full flex items-center justify-center hover:bg-[#333333] transition-colors">
+            </Button>
+            <Button className="no-drag w-[46px] h-full flex items-center justify-center hover:bg-[#333333] transition-colors">
               <Square size={12} />
-            </button>
-            <button
+            </Button>
+            <Button
               className="no-drag w-[46px] h-full flex items-center justify-center hover:bg-[#e81123] hover:text-white"
               onClick={onClose}
             >
               <X size={18} />
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -85,6 +86,7 @@ export default function OSWindow({ title, children, isOpen, onClose }: any) {
                 alt="Quick access"
                 width={16}
                 height={16}
+                className="optimize-gpu"
               />
               Quick access
             </div>
@@ -108,7 +110,7 @@ export default function OSWindow({ title, children, isOpen, onClose }: any) {
                 alt="OneDrive"
                 width={16}
                 height={16}
-                className="w-4 h-4  rounded-sm"
+                className="w-4 h-4 optimize-gpu  rounded-sm"
               />
               <span className="text-[12px]">OneDrive</span>
             </div>

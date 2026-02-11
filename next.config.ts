@@ -1,56 +1,48 @@
-/** @type {import('next').NextConfig} */
+import type { NextConfig } from "next";
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-// const isProd = process.env.APP_STAGE === "production";
+const nextConfig: NextConfig = {
+  // 1. تفعيل الـ Compiler الجديد لـ React 19 (لتحسين أداء الريندر)
+  reactCompiler: true,
+  reactStrictMode: false, // في المشاريع الكبيرة يفضل false لتقليل الـ Re-renders في الديف
 
-const nextConfig = {
-  reactStrictMode: true,
-
-  // 1. إعدادات الـ Experimental (تسريع التطوير)
+  // 2. تحسينات الأداء والمكتبات (Tree Shaking)
   experimental: {
-    // تفعيل الكاش لـ Turbopack (يفيد جداً في السرعة)
+    // تفعيل الكاش لمحرك Turbopack لتسريع الديف
     turbopackFileSystemCacheForDev: true,
-    // تفعيل المترجم الجديد لـ React 19
-    reactCompiler: true,
-  },
 
-  // 2. إعدادات الصور (الحل النهائي للـ 404 والـ 400)
-  images: {
-    // في الـ Production بنخليها true عشان نتخطى مشاكل الـ Path في فيرسيل
-    unoptimized: false,
-    // لو بتستخدم صور من روابط خارجية مستقبلاً
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "**",
-      },
+    // إجبار Next.js على سحب الأجزاء المستخدمة فقط من المكتبات الكبيرة
+    optimizePackageImports: [
+      "lucide-react",
+      "react-icons",
+      "framer-motion",
+      "gsap",
+      "@radix-ui/react-icons",
+      "lucide-react",
     ],
   },
 
-  // 3. إعدادات المسارات (Routing & Paths)
-  // نتركها فارغة لضمان أن المسار يبدأ من الجذر (Root) في فيرسيل
-  basePath: "",
-  // إيقاف الـ trailingSlash لحل مشاكل الروابط الوهمية
-  trailingSlash: false,
+  // 3. تحسين استهلاك الذاكرة في الـ Build
+  // هذا يمنع الـ Build من استهلاك الرام بالكامل في المكتبات الضخمة
+  // (يفيد جداً في Vercel أو السيرفرات الضعيفة)
+  serverExternalPackages: ["mongoose", "mongodb"],
 
-  // 4. إعدادات الـ Build والإنتاج
-  // تجاهل الأخطاء لضمان استمرارية الـ Deployment
-  eslint: {
-    ignoreDuringBuilds: true,
+  // 4. تجاهل الفحوصات لزيادة سرعة الـ Build النهائي
+  // eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
+
+  // 5. إعدادات الصور
+  images: {
+    unoptimized: false,
+    formats: ["image/avif", "image/webp"], // تحويل الصور لأخف صيغ ممكنة تلقائياً
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 
-  // إعداد اختياري: يساعد في استقرار الملفات الثابتة في بيئة Standalone
-  output: "standalone",
-
-  // تحسين معالجة الروابط
-  skipProxyUrlNormalize: true,
+  // ضغط الملفات الناتجة لتقليل حجم الـ Payload
+  compress: true,
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

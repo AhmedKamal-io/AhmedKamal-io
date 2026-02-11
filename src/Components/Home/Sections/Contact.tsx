@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { BiSolidMessage } from "react-icons/bi";
 import {
@@ -20,7 +21,7 @@ const Contact = () => {
         alt="WorldMap"
         fill
         loading="lazy"
-        className="object-cover absolute z-0" // أضفت opacity بسيطة لجمالية النص فوق الخريطة
+        className="object-cover absolute z-0 optimize-gpu" // أضفت opacity بسيطة لجمالية النص فوق الخريطة
       />
 
       {/* الحاوية الرئيسية أصبحت مرنة أكثر في الارتفاع */}
@@ -98,12 +99,12 @@ const Contact = () => {
 
           {/* Submit Button - تم توسيطه في الموبايل وجعله متناسقاً */}
           <div className="flex justify-center md:justify-start">
-            <button
+            <Button
               type="submit"
               className="bg-Prime hover:bg-Secound text-Whitey mt-6 rounded-xl px-10 py-3 w-full md:w-fit font-bold transition-colors duration-300 shadow-md"
             >
               Send
-            </button>
+            </Button>
           </div>
         </form>
       </div>

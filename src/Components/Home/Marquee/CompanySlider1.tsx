@@ -31,7 +31,7 @@ const CompanySlider = () => {
             width={120}
             height={80}
             loading="lazy"
-            className={`grayscale-100 hover:grayscale-0 transition-all duration-600 Bigshadow p-1 ${company.bg} rounded-2xl mx-1`}
+            className={`grayscale-100 optimize-gpu  hover:grayscale-0 transition-all duration-600 Bigshadow p-1 ${company.bg} rounded-2xl mx-1`}
           />
         ))}
       </Marquee>

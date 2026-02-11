@@ -10,7 +10,7 @@ const Projects = () => {
         loop
         muted
         playsInline
-        className="w-full h-full object-cover absolute bottom-[-307px] select-none "
+        className="w-full h-full object-cover optimize-gpu absolute bottom-[-307px] select-none "
       ></video>
       <div className="z-1000 flex flex-col justify-center items-center bg-transparent">
         <h2>Resent Projects</h2>

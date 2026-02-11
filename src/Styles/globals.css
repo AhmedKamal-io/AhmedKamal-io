@@ -3,6 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: pan-y; /* يسمح بالسكرول العمودي فقط ويمنع الحركات العشوائية */
+  -webkit-tap-highlight-color: transparent; /* يحذف اللون الرمادي عند الضغط في الموبايل */
+}
+
+img {
+  /* content-visibility: auto; لا ترسم الصورة إلا لو اقترب منها السكرول */
+  image-rendering: -webkit-optimize-contrast; /* وضوح عالي في الموبايل */
+}
 :root {
   --Blacky: #050505;
   --BlackyFade: #05050577;
@@ -51,6 +62,59 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+.is-scrolling {
+  pointer-events: none; /* بيوقف حسابات الـ Hover والـ Click أثناء السكرول */
+}
+section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px; /* تقدير لطول القسم */
+}
+@layer components {
+  /* كلاس تحسين الأداء للعناصر المتحركة والثقيلة */
+  .optimize-gpu {
+    /* 1. إجبار المتصفح على إنشاء طبقة جديدة في الـ GPU */
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+
+    /* 2. تحسين ريندر الصور والفيديوهات أثناء الحركة */
+    will-change: transform, opacity;
+
+    /* 3. منع الاهتزاز (Jitter) في المتصفحات المبنية على Chromium */
+    perspective: 1000px;
+    backface-visibility: hidden;
+
+    /* 4. الحفاظ على وضوح الحواف أثناء الأنميشن */
+    transform-style: preserve-3d;
+  }
+}
+
+/* تحسين إضافي للصور والفيديوهات */
+img.optimize-gpu,
+video.optimize-gpu {
+  /* يخبر المتصفح أن محتوى العنصر لن يخرج عن حدوده، مما يسرع عملية الـ Paint */
+  contain: paint;
 }
 
 @theme inline {
@@ -119,8 +183,8 @@ body {
   background: var(--Blacky);
   color: var(--textColor);
   font-family: var(--font-second);
-  box-shadow: 0 0 30px var(--Blacky) inset;
-  scroll-behavior: smooth;
+  /* box-shadow: 0 0 30px var(--Blacky) inset; */
+  /* scroll-behavior: smooth; */
   scroll-padding-top: 75px;
   user-select: none;
   /* overflow: hidden; */
@@ -194,7 +258,12 @@ h6 {
     0 0 10px var(--Assend),
     0 0 20px var(--Assend);
 }
-
+.lenis-scrolling img,
+.lenis-scrolling video,
+.Bigshadow,
+.Whiteyshadow {
+  will-change: transform;
+}
 .Masked {
   -webkit-mask: linear-gradient(
     90deg,
@@ -254,3 +323,20 @@ h6 {
     @apply bg-background text-foreground;
   }
 }
+@media (min-width: 1024px) {
+  .Bigshadow {
+    text-shadow:
+      0 0 10px var(--Blacky),
+      0 0 20px var(--Blacky),
+      0 0 30px var(--Blacky),
+      0 0 40px var(--Blacky);
+  }
+  .Whiteyshadow {
+    text-shadow:
+      0 0 10px var(--WhiteyFade),
+      0 0 20px var(--WhiteyFade),
+      0 0 40px var(--WhiteyFade),
+      0 0 60px var(--WhiteyFade);
+  }
+}
+

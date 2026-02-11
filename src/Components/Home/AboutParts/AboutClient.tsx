@@ -1,9 +1,9 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import AboutSecound from "../AboutParts/AboutSecound";
-import Introduce from "../AboutParts/Introduce";
-import AboutSocial from "../AboutParts/AboutSocial";
+import AboutSecound from "./AboutSecound";
+import Introduce from "./Introduce";
+import AboutSocial from "./AboutSocial";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 

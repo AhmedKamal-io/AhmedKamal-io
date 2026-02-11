@@ -36,7 +36,7 @@ const Slider = () => {
               width={130}
               height={130}
               loading="lazy"
-              className="mx-1 sm:mx-2 bg-Bluey px-2 py-1 GlueSecound rounded-2xl grayscale-100 transition-all shadow-Secound border-1 duration-700 hover:grayscale-0 hover:shadow-md Bigshadow mas w-[120px] h-auto"
+              className="mx-1 sm:mx-2 bg-Bluey optimize-gpu px-2 py-1 GlueSecound rounded-2xl grayscale-100 transition-all shadow-Secound border-1 duration-700 hover:grayscale-0 hover:shadow-md Bigshadow mas w-[120px] h-auto"
             />
           </a>
         ))}

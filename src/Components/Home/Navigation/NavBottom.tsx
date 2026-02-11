@@ -21,11 +21,11 @@ const NavBottom = () => {
   const links = useMemo(
     () => [
       { label: "About", href: "#about", icon: <User size={iconSize} /> },
-      {
-        label: "Service",
-        href: "#services",
-        icon: <LayoutGrid size={iconSize} />,
-      },
+      // {
+      //   label: "Service",
+      //   href: "#services",
+      //   icon: <LayoutGrid size={iconSize} />,
+      // },
       { label: "Technos", href: "#tech", icon: <Cpu size={iconSize} /> },
       {
         label: "Projects",

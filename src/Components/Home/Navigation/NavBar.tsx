@@ -15,7 +15,7 @@ const NavBar = () => {
             alt="Logo Of Ahmed Kamal"
             width={50}
             height={50}
-            className="focus:outline-none"
+            className="focus:outline-none optimize-gpu"
           />
         </a>
       </div>

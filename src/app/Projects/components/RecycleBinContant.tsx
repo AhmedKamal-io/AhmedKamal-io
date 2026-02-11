@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trash2, X, ZoomIn } from "lucide-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 
 export function RecycleBinContent() {
   const [selectedImg, setSelectedImg] = useState<{
@@ -43,7 +44,7 @@ export function RecycleBinContent() {
                   src={img.src}
                   alt={img.name}
                   fill
-                  className="object-cover"
+                  className="object-cover optimize-gpu"
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-black/40 transition-opacity">
                   <ZoomIn size={16} />
@@ -69,9 +70,9 @@ export function RecycleBinContent() {
             onClick={() => setSelectedImg(null)} // غلق عند الضغط في أي مكان في الخلفية
           >
             {/* زر الإغلاق */}
-            <button className="absolute top-10 right-10 text-white hover:bg-white/10 p-2 rounded-full transition-colors z-[1000]">
+            <Button className="absolute top-10 right-10 text-white hover:bg-white/10 p-2 rounded-full transition-colors z-[1000]">
               <X size={30} />
-            </button>
+            </Button>
 
             {/* حاوية الصورة مع أنيميشن الدخول */}
             <motion.div
@@ -86,7 +87,7 @@ export function RecycleBinContent() {
                   src={selectedImg.src}
                   alt={selectedImg.name}
                   fill
-                  className="object-contain" // لضمان ظهور الصورة كاملة دون قص
+                  className="object-contain optimize-gpu" // لضمان ظهور الصورة كاملة دون قص
                   priority
                 />
               </div>
