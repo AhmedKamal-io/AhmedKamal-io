@@ -11,7 +11,7 @@ const ImageFill = (src : string , alt : string ) => {
   
   return (
     <>
-    <Image src={src} alt={alt} priority loading='lazy' fill   className={`optimize-gpu object-cover w-full h-full absolute `}  />
+    <Image src={src} alt={alt} priority loading='lazy' fill   className={`optimize-gpu object-cover w-full h-full absolute`}  />
     </>
   )
 }
